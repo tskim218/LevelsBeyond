@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LevelsBeyond</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	    <style>
+         table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+         }
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+      	</style>
+
+	</head>
+	<body ng-app="LevelsBeyond" ng-controller="AngularIssuesController">
+		<table border = "0">
+
+		    <tr>
+	            <th><center>Title</center></th>
+	            <th><center>User Login</center></th>
+	            <th><center>Assignee Login</center></th>
+	            <th><center>Body</center></th>
+
+	        </tr>
+	        <tr ng-repeat = "issue in issues | DataFilter">
+                <td><font size="-5">{{ issue.title }}></font></td>
+      			<td><font size="-5">{{ issue.user.login }}</font></td>
+                <td><font size="-5">{{ issue.assignee.login }}</font></td>
+        		<td><font size="-5">{{ issue.body }}</font></td>
+
+            </tr>
+		</table>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+	<script src="app.js"></script>
+	<script src="scripts/AngularIssuesController.js"></script>
+	<script src="scripts/AngularIssues.js"></script>
+	<script src="scripts/DataFilter.js"></script>
+
+
+</html>
