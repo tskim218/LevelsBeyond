@@ -17,10 +17,11 @@ Tested in MacBook.
   e. CRUD operations.
     1. Get all notes: curl -i -H "Content-Type: application/json" -X GET http://localhost:8080/api/notes
     2. Get an existing note: curl -i -H "Content-Type: application/json" -X GET http://localhost:8080/api/notes/1
-    3. Create a new note: curl -i -H "Content-Type: application/json" -X POST -d '{"body" : "Pick up milk!"}' http://localhost:8080/api/notes
-    4. Update an existing note: curl -i -H "Content-Type: application/json" -X PUT -d '{"body" : "updated another Pick up milk!"}' http://localhost:8080/api/notes/3
-    5. Delete an existing note: curl -i -H "Content-Type: application/json" -X DELETE  http://localhost:8080/ai/notes/3
-    6. Returning empty means empty notes or none existing id.
+    3. Get notes by searching parameter: curl -i -H "Content-Type: application/json" -X GET http://localhost/api/notes?query=milk
+    4. Create a new note: curl -i -H "Content-Type: application/json" -X POST -d '{"body" : "Pick up milk!"}' http://localhost:8080/api/notes
+    5. Update an existing note: curl -i -H "Content-Type: application/json" -X PUT -d '{"body" : "updated another Pick up milk!"}' http://localhost:8080/api/notes/3
+    6. Delete an existing note: curl -i -H "Content-Type: application/json" -X DELETE  http://localhost:8080/ai/notes/3
+    7. Returning empty means empty notes or none existing id.
 
 * Front-End
 1. My web server - MAMP.
